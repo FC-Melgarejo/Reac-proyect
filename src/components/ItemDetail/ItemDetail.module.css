@@ -1,0 +1,23 @@
+.ItemDetail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .cartItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  .cartItem img {
+    width: 150px;
+    height: 150px;
+  }

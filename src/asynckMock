@@ -1,0 +1,102 @@
+const products = [
+    {
+        id:"1",
+        name:"Remera",
+        price:20,
+        category:"remeras",
+        picture:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWAPpUDqFpm18licdTamM9GwA6oOxDmWPvrT2SCoOZNiRuNf-GXM9stBnAzJeVJfAGaYU&usqp=CAU",
+        stock:10,
+        description:"remeras de algodon"
+    },
+    {
+        id:"2",
+        name:"Auricular",
+        price:"50",
+        category:"auriculares",
+        picture:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpE3PkEkJib0dmmDINP4o2ezu9lgKu_EzhTw&usqp=CAU",
+        stock:20,
+        description:"auriculares"
+
+    },
+    {
+        id:"3",
+        name:"Parcka",
+        price:200,
+        category:"camperas",
+        picture:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3LRecvDCKFEBrD3nPrtFZmQIeVYpcpc90xQ&usqp=CAU",
+        stock:25,
+        description:"campera reversible"
+    },
+    {
+        id:"4",
+        name:"Botella",
+        price:15,
+        category:"botellas",
+        picture:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkVARQ8swzbTfIs7n1uSR9HSnC9gcPUucokg&usqp=CAU",
+        stock:20,
+        description:"Botella Aluminio",
+
+    },
+    {
+        id:"5",
+        name:"Anteojos",
+        price:10,
+        category:"anteojos",
+        picture:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT71wPw-ufXnlMI-h5V5IiZOU48FbyYHIbFdg&usqp=CAU",
+        stock:30,
+        description:"Anteojos de sol",
+    },
+    {
+        id:"6",
+        name:"Gorrito",
+        price:15,
+        category:"gorros",
+        picture:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1zIfrD4xyfF9NXtXNPtPRtXb7xcqdbQA4wQ&usqp=CAU",
+        stock:10,
+        description:"Gorritos de tela",
+    },
+    {
+        id:"7",
+        name:"Mochila",
+        price:35,
+        category:"mochilas",
+        picture:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGET4aUhhfvtXdkiESGxHV68ykeP5qD5snEg&usqp=CAU",
+        stock:50,
+        description:"Mochila Tela",
+    },
+    {
+        id:"8",
+        name:"Zapatilla",
+        price:100,
+        category:"zapatillas",
+        picture:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_51GjKab3vrAQ-76PkSc8_QhPpcszErMaXA&usqp=CAU",
+        stock:30,
+        description:"Zapatillas runner",
+    }
+]
+
+export const getProduct =()=>{
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+            resolve(products)
+        },500)
+    })
+}
+
+export const getProductById =(productId)=>{
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+            resolve(products.find(prod =>prod.id === productId))
+        },500)
+
+    })
+}
+
+export const getProductCategory =(categoryId)=>{
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+            resolve(categoryId.filter(category =>category.id === categoryId))
+        },500)
+
+    })
+}
